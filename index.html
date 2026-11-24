@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Food Place · Rescate alimentario en Morelia</title>
+<meta name="description" content="Food Place conecta la fruta y verdura que no se vende por su apariencia con bancos de alimentos y familias de Morelia. Prototipo para Oxigena tus Ideas.">
+<meta name="theme-color" content="#047857">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#inicio">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="23" r="13" fill="#10B981"/>
+        <path d="M20 10c2-6 7-8 13-8-1 6-6 9-13 8z" fill="#A3E635"/>
+        <path d="M20 10v4" stroke="#065F46" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M14 23a6 6 0 0 0 6 6" stroke="#ECFDF5" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      </svg>
+      Food Place
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#para-quien">Para quién</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#app">App</a>
+      <a href="#lotes">Lotes</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#aliados">Aliados</a>
+    </nav>
+    <a class="live-pill" href="#lotes" aria-label="Kilos rescatados en vivo">
+      <span class="pulse" aria-hidden="true"></span>
+      <span class="live-pill-txt">En vivo</span>
+      <strong data-stat="kg">0</strong>&nbsp;kg
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <!-- Ilustraciones decorativas -->
+    <svg class="deco deco--leaf1" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40C8 20 20 8 42 6c0 22-12 34-34 34z" fill="#34D399"/><path d="M8 40L30 18" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <svg class="deco deco--leaf2" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 40C8 20 20 8 42 6c0 22-12 34-34 34z" fill="#A3E635"/><path d="M8 40L30 18" stroke="#3F6212" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <svg class="deco deco--drop" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4s14 16 14 26a14 14 0 0 1-28 0C10 20 24 4 24 4z" fill="#5EEAD4"/><path d="M18 30a6 6 0 0 0 6 6" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Oxigena tus Ideas · Morelia, Michoacán</p>
+        <h1>Lo que se ve feo <span class="hl">también se come.</span></h1>
+        <p class="lede">Food Place conecta la fruta y la verdura que no se vende por su apariencia con bancos de alimentos y familias de Morelia. Porque una mancha no le quita lo nutritivo, y nadie debería quedarse sin comer bien.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#app">Probar la app</a>
+          <a class="btn btn-ghost" href="#lotes">Ver lotes activos</a>
+        </div>
+        <ul class="trust" aria-label="Lo que nos distingue">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10 10 4 21 3c0 11-6 17-17 17z" fill="#34D399"/><path d="M4 20L15 9" stroke="#047857" stroke-width="2" stroke-linecap="round"/></svg>
+            Fresco y nutritivo
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="#10B981"/><circle cx="12" cy="10" r="2.6" fill="#ECFDF5"/></svg>
+            Del mercado a tu colonia
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V12" stroke="#047857" stroke-width="2" stroke-linecap="round"/><path d="M12 13C12 7 7 4 2 5c0 6 5 9 10 8z" fill="#34D399"/><path d="M12 11c0-5 4-8 10-7 0 5-4 8-10 7z" fill="#A3E635"/></svg>
+            Todo se aprovecha
+          </li>
+        </ul>
+      </div>
+
+      <aside class="card live-panel" aria-labelledby="live-title">
+        <div class="panel-head">
+          <h2 class="panel-title" id="live-title">Tablero en vivo</h2>
+          <span class="badge badge--live"><span class="pulse" aria-hidden="true"></span>En vivo</span>
+        </div>
+        <div class="kpis">
+          <div class="kpi kpi--main">
+            <span class="kpi-num"><span data-stat="kg">0</span><small>kg</small></span>
+            <span class="kpi-label">rescatados de la basura</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num" data-stat="rescates">0</span>
+            <span class="kpi-label">rescates reservados</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num" data-stat="comidas">0</span>
+            <span class="kpi-label">comidas para Morelia</span>
+          </div>
+          <div class="kpi">
+            <span class="kpi-num" data-stat="activos">0</span>
+            <span class="kpi-label">lotes esperando rescate</span>
+          </div>
+        </div>
+        <div class="mini-feed">
+          <h3 class="mini-title">Última actividad</h3>
+          <ol class="feed feed--mini" id="heroFeed"></ol>
+        </div>
+        <p class="panel-note">Datos de demostración: cambian con lo que hagas en esta página.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEMA ============ -->
+  <section class="section" id="problema">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">El problema</p>
+        <h2>Fruta lista en el puesto, mesas que la esperan.</h2>
+      </div>
+      <div class="prose">
+        <p>En fruterías y mercados, la fruta con manchas, tamaño irregular o piel golpeada se queda en la caja o termina en la basura, aunque sigue siendo apta para comer. Con ella se tiran el dinero, las madrugadas y el trabajo de quien la vende.</p>
+        <p>Mientras tanto, en colonias de bajos ingresos de la ciudad, la fruta y la verdura frescas son de las primeras cosas que se dejan de comprar. <strong>La comida ya existe y está a unas calles. Solo falta conectarla.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARA QUIÉN ============ -->
+  <section class="section section--mint" id="para-quien">
+    <div class="wrap">
+      <header class="sec-head sec-head--center">
+        <p class="eyebrow">Para quién es Food Place</p>
+        <h2>Gana quien vende. Gana quien come.</h2>
+        <p class="lede">Una sola plataforma, dos razones para sonreír al final del día.</p>
+      </header>
+
+      <div class="audience">
+        <article class="card aud aud--com">
+          <svg class="aud-art" viewBox="0 0 96 80" aria-hidden="true">
+            <rect x="10" y="30" width="76" height="44" rx="6" fill="#ECFDF5"/>
+            <g fill="#047857"><circle cx="17" cy="32" r="7"/><circle cx="31" cy="32" r="7"/><circle cx="45" cy="32" r="7"/><circle cx="59" cy="32" r="7"/><circle cx="73" cy="32" r="7"/><circle cx="83" cy="32" r="5"/></g>
+            <path d="M6 12h84l-2 20H8z" fill="#10B981"/>
+            <path d="M22 12l-2 20M38 12l-1 20M54 12l1 20M70 12l2 20" stroke="#D1FAE5" stroke-width="6"/>
+            <rect x="16" y="56" width="64" height="16" rx="3" fill="#065F46"/>
+            <circle cx="30" cy="50" r="7" fill="#E2483D"/>
+            <circle cx="45" cy="48" r="8" fill="#F59E0B"/>
+            <circle cx="60" cy="50" r="7" fill="#A3E635"/>
+            <path d="M45 40c1-3 3-4 6-4" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M82 46l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z" fill="#FBBF24" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+          <p class="aud-tag">Para comerciantes</p>
+          <h3>No tires tu esfuerzo a la basura.</h3>
+          <p>Esa caja de mango manchado ya te costó dinero, madrugadas y trabajo. Cada kilo que se tira es dinero que ya pagaste. Publícala en menos de un minuto y <strong>transforma lo que no se vendió hoy en tu primera entrega de Comida en Corto</strong>: recupera tu inversión y conviértete en un líder solidario de tu mercado.</p>
+          <ul class="checks">
+            <li>Recupera parte de lo que hoy das por perdido</li>
+            <li>Tú eliges el horario de entrega, sin cambiar tu rutina</li>
+            <li>Tu puesto se distingue como solidario ante tus clientes</li>
+          </ul>
+          <a class="btn btn-primary btn-sm" href="#app">Publicar mi primer lote</a>
+        </article>
+
+        <article class="card aud aud--fam">
+          <svg class="aud-art" viewBox="0 0 96 80" aria-hidden="true">
+            <path d="M16 38L48 12l32 26v32a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4z" fill="#ECFDF5"/>
+            <path d="M8 40L48 6l40 34" stroke="#047857" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="48" cy="62" rx="22" ry="7" fill="#fff" stroke="#A7F3D0" stroke-width="3"/>
+            <circle cx="39" cy="55" r="6" fill="#E2483D"/>
+            <circle cx="49" cy="53" r="7" fill="#F59E0B"/>
+            <circle cx="58" cy="56" r="5" fill="#A3E635"/>
+            <path d="M48 40s-8-4.6-8-10a4.2 4.2 0 0 1 8-2 4.2 4.2 0 0 1 8 2c0 5.4-8 10-8 10z" fill="#10B981"/>
+          </svg>
+          <p class="aud-tag">Para familias y bancos de alimentos</p>
+          <h3>Alimentos frescos, nutritivos y dignos para tu mesa, sin estigmas.</h3>
+          <p>La fruta con una mancha sabe igual de rica y alimenta igual. Aquí solo hay producto fresco del mercado, <strong>elegido con el mismo cuidado</strong> que el que se vende en el puesto.</p>
+          <ul class="checks">
+            <li>Ves la frescura real de cada lote antes de reservar</li>
+            <li>Recoges con tu folio, como cualquier cliente</li>
+            <li>Fruta y verdura de mercados de tu propia ciudad</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm" href="#lotes">Ver lo que hay hoy</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="section" id="como">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>Tres pasos, sin complicaciones.</h2>
+      </header>
+      <ol class="step-cards">
+        <li class="card step">
+          <svg class="step-art" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="16" cy="20" r="7" fill="#E2483D"/><circle cx="27" cy="18" r="8" fill="#F59E0B"/><circle cx="36" cy="21" r="6" fill="#A3E635"/>
+            <path d="M27 10c1-3 3-4 6-4" stroke="#047857" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <rect x="6" y="24" width="36" height="18" rx="4" fill="#10B981"/><path d="M6 31h36M6 36h36" stroke="#047857" stroke-width="2"/>
+          </svg>
+          <span class="step-num">Paso 1</span>
+          <h3>El comerciante publica su Comida en Corto</h3>
+          <p>Indica qué tiene, cuántos kilos son, por qué no se vendió y en qué horario puede entregarlo. Lo que antes era pérdida, ahora es una oportunidad.</p>
+        </li>
+        <li class="card step">
+          <svg class="step-art" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="14" y="4" width="20" height="40" rx="5" fill="#0B2E24"/><rect x="17" y="9" width="14" height="28" rx="2" fill="#ECFDF5"/>
+            <path d="M24 30s-6-3.8-6-8a3.2 3.2 0 0 1 6-1.6A3.2 3.2 0 0 1 30 22c0 4.2-6 8-6 8z" fill="#10B981"/>
+            <circle cx="40" cy="10" r="5" fill="#A3E635"/><circle cx="8" cy="36" r="4" fill="#5EEAD4"/>
+          </svg>
+          <span class="step-num">Paso 2</span>
+          <h3>La plataforma lo conecta</h3>
+          <p>Une el lote con el Banco de Alimentos, comedores o familias registradas en su zona. Nadie tiene que pedir: solo reservar.</p>
+        </li>
+        <li class="card step">
+          <svg class="step-art" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M30 14c2-6 7-8 12-7-1 5-6 8-12 7z" fill="#A3E635"/>
+            <path d="M10 18h28l-3 24H13z" fill="#10B981"/><path d="M17 18a7 7 0 0 1 14 0" stroke="#065F46" stroke-width="3" fill="none"/>
+            <path d="M18 30l4 4 8-9" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="step-num">Paso 3</span>
+          <h3>Se recoge el mismo día</h3>
+          <p>El lote sale del puesto fresco y el comerciante recupera parte de su valor en vez de perderlo. Una mesa más llena esa noche.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO 1 · SIMULADOR ============ -->
+  <section class="section section--tint" id="app">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow"><span class="eyebrow-num">01</span> Simulador de la app</p>
+        <h2>Así se usa desde el celular.</h2>
+        <p class="lede">Publicar un lote toma menos de un minuto; reservarlo, todavía menos. Pruébalo como comerciante y luego como Banco de Alimentos o familia: todo lo que hagas aparece al instante en el tablero.</p>
+      </header>
+
+      <div class="sim-grid">
+        <div class="phone">
+          <div class="phone-notch" aria-hidden="true"></div>
+          <div class="phone-screen">
+            <div class="status-bar" aria-hidden="true">
+              <span id="phoneClock">12:00</span>
+              <span class="status-icons">
+                <svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5" width="3" height="7" rx="1"/><rect x="10" y="2" width="3" height="10" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1" opacity=".35"/></svg>
+                <svg viewBox="0 0 24 12"><rect x=".5" y=".5" width="20" height="11" rx="3" fill="none" stroke="currentColor"/><rect x="2.5" y="2.5" width="13" height="7" rx="1.5"/><rect x="21.5" y="4" width="2" height="4" rx="1"/></svg>
+              </span>
+            </div>
+
+            <div class="app-bar">
+              <span class="app-brand">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="23" r="13" fill="#10B981"/><path d="M20 10c2-6 7-8 13-8-1 6-6 9-13 8z" fill="#A3E635"/></svg>
+                Food Place
+              </span>
+              <span class="badge badge--live badge--sm"><span class="pulse" aria-hidden="true"></span>En línea</span>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Vista de la app">
+              <button class="tab" role="tab" id="tab-com" aria-controls="panel-com" aria-selected="true">Comerciante</button>
+              <button class="tab" role="tab" id="tab-ban" aria-controls="panel-ban" aria-selected="false" tabindex="-1">Banco / Familia</button>
+            </div>
+
+            <div class="app-body" id="appBody">
+              <!-- Vista comerciante -->
+              <div role="tabpanel" id="panel-com" aria-labelledby="tab-com">
+                <div class="app-hello">
+                  <span class="avatar">P27</span>
+                  <div><strong>Puesto 27</strong><small>Frutas y legumbres</small></div>
+                </div>
+                <div class="nudge nudge--com">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V12" stroke="#047857" stroke-width="2" stroke-linecap="round"/><path d="M12 13C12 7 7 4 2 5c0 6 5 9 10 8z" fill="#34D399"/><path d="M12 11c0-5 4-8 10-7 0 5-4 8-10 7z" fill="#A3E635"/></svg>
+                  <p><b>Aprovecha la Comida en Corto de hoy.</b> Publícala en un minuto y conviértela en valor recuperado.</p>
+                </div>
+                <div class="app-stats">
+                  <div><b id="comCount">0</b><small>lotes hoy</small></div>
+                  <div><b id="comKg">0</b><small>kg salvados</small></div>
+                  <div><b id="comValor">$0</b><small>valor recuperable</small></div>
+                </div>
+
+                <form id="loteForm" class="app-form" novalidate>
+                  <h3 class="app-title">Registrar lote</h3>
+
+                  <label class="field">
+                    <span class="field-label">Producto</span>
+                    <select id="fProducto" required></select>
+                  </label>
+
+                  <div class="field">
+                    <label class="field-label" for="fKg">Kilos</label>
+                    <div class="stepper">
+                      <button type="button" data-step="-1" aria-label="Restar 1 kilo">−</button>
+                      <input id="fKg" type="number" min="0.5" max="500" step="0.5" value="10" inputmode="decimal" required>
+                      <button type="button" data-step="1" aria-label="Sumar 1 kilo">+</button>
+                    </div>
+                  </div>
+
+                  <fieldset class="field">
+                    <legend class="field-label">Motivo estético</legend>
+                    <div class="chips chips--wrap" id="fMotivo"></div>
+                  </fieldset>
+
+                  <label class="field">
+                    <span class="field-label">Mercado</span>
+                    <select id="fMercado" required></select>
+                  </label>
+
+                  <fieldset class="field">
+                    <legend class="field-label">Horario de recolección</legend>
+                    <div class="time-row">
+                      <label><span>Desde</span><input type="time" id="fDesde" required></label>
+                      <label><span>Hasta</span><input type="time" id="fHasta" required></label>
+                    </div>
+                  </fieldset>
+
+                  <label class="field">
+                    <span class="field-label">Vida útil estimada</span>
+                    <select id="fVida">
+                      <option value="6">6 horas</option>
+                      <option value="12">12 horas</option>
+                      <option value="24" selected>24 horas</option>
+                      <option value="48">48 horas</option>
+                    </select>
+                  </label>
+
+                  <p class="form-error" id="formError" role="alert" hidden></p>
+                  <button class="btn btn-primary btn-block" type="submit">
+                    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+                    Publicar lote
+                  </button>
+                </form>
+
+                <h3 class="app-title">Mis lotes publicados</h3>
+                <ul class="app-list" id="misLotes"></ul>
+              </div>
+
+              <!-- Vista banco / familia -->
+              <div role="tabpanel" id="panel-ban" aria-labelledby="tab-ban" hidden>
+                <div class="app-hello">
+                  <span class="avatar avatar--alt" id="recIni">BA</span>
+                  <div><strong id="recNombre">Banco de Alimentos</strong><small id="recDesc">Recibe y distribuye en Morelia</small></div>
+                </div>
+                <div class="nudge nudge--fam">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-4.8-8-10.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 8 2.5C20 16.2 12 21 12 21z" fill="#10B981"/></svg>
+                  <p><b>Fresco, nutritivo y digno.</b> Elegido con el mismo cuidado que lo que se vende en el puesto.</p>
+                </div>
+
+                <div class="seeds" id="seedsCard">
+                  <div class="seeds-top">
+                    <span class="seeds-title">🌱 Puntos Semilla</span>
+                    <span class="seeds-pts"><b id="seedsPts">0</b> / 200</span>
+                  </div>
+                  <div class="seeds-bar" aria-hidden="true"><span id="seedsBar"></span></div>
+                  <small id="seedsMsg">Reserva un lote y gana +50 puntos.</small>
+                </div>
+
+                <div class="seg" role="radiogroup" aria-label="Recibo como" id="recSeg"></div>
+
+                <div class="chips chips--scroll" id="banFiltro" role="group" aria-label="Filtrar por mercado"></div>
+
+                <h3 class="app-title">Lotes cerca de ti <span class="count" id="banCount">0</span></h3>
+                <ul class="app-list" id="banLista"></ul>
+
+                <h3 class="app-title">Mis reservas <span class="count" id="resCount">0</span></h3>
+                <ul class="app-list" id="misReservas"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sim-side">
+          <div class="card side-card">
+            <h3 class="side-title" id="guideTitle">Vista del comerciante</h3>
+            <ol class="guide" id="guideList"></ol>
+            <a class="btn btn-ghost btn-sm" href="#lotes">Ver el tablero de lotes ↓</a>
+          </div>
+          <div class="card side-card">
+            <div class="panel-head">
+              <h3 class="side-title">Actividad en vivo</h3>
+              <span class="badge badge--live badge--sm"><span class="pulse" aria-hidden="true"></span>En vivo</span>
+            </div>
+            <ol class="feed" id="feed"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO 2 · MARKETPLACE ============ -->
+  <section class="section" id="lotes">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow"><span class="eyebrow-num">02</span> Tablero de lotes</p>
+        <h2>Lotes activos en Morelia.</h2>
+        <p class="lede">Detrás de cada tarjeta hay un comerciante que decidió no tirar su esfuerzo y una familia que hoy puede comer mejor. Mira cuánta frescura le queda a cada lote, de qué mercado sale y reserva su rescate.</p>
+      </header>
+
+      <div class="counter-band" aria-label="Contador global de rescates">
+        <div class="cb-item">
+          <span class="cb-num"><span data-stat="kg">0</span><small>kg</small></span>
+          <span class="cb-label">salvados de la basura</span>
+        </div>
+        <div class="cb-item">
+          <span class="cb-num" data-stat="rescates">0</span>
+          <span class="cb-label">rescates reservados</span>
+        </div>
+        <div class="cb-item">
+          <span class="cb-num" data-stat="comidas">0</span>
+          <span class="cb-label">comidas que llegan a una mesa</span>
+        </div>
+        <div class="cb-item">
+          <span class="cb-num"><span data-stat="kgDisp">0</span><small>kg</small></span>
+          <span class="cb-label">todavía esperan un rescate</span>
+        </div>
+      </div>
+
+      <div class="board-bar">
+        <div class="chips chips--scroll" id="boardFiltro" role="group" aria-label="Filtrar por mercado"></div>
+        <div class="board-tools">
+          <span class="board-summary" id="boardSummary"></span>
+          <label class="sort">
+            <span>Ordenar</span>
+            <select id="boardSort">
+              <option value="urgencia">Más urgentes</option>
+              <option value="kg">Más kilos</option>
+              <option value="reciente">Más recientes</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="board-grid" id="board"></div>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO 3 · CALCULADORA ============ -->
+  <section class="section section--tint" id="impacto">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow"><span class="eyebrow-num">03</span> Calculadora de impacto</p>
+        <h2>Lo que no se tira también cuida el agua y el aire.</h2>
+        <p class="lede">Cada kilo que rescatamos ya gastó agua, tierra y energía para crecer. Mueve los controles y descubre lo que Morelia puede lograr cuando nos organizamos. Son estimaciones para el pitch, no datos medidos.</p>
+      </header>
+
+      <div class="shock">
+        <div class="shock-card shock--agua">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4s14 16 14 26a14 14 0 0 1-28 0C10 20 24 4 24 4z" fill="#5EEAD4"/><path d="M18 30a6 6 0 0 0 6 6" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+          <p><b>250 km³ de agua al año</b> se usan en el mundo para producir alimentos que nunca llegan a una mesa.</p>
+          <cite>FAO, 2013</cite>
+        </div>
+        <div class="shock-card shock--co2">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 38h23a9 9 0 0 0 0-18 12 12 0 0 0-23-2A10 10 0 0 0 13 38z" fill="#D1FAE5" stroke="#10B981" stroke-width="2.5"/><path d="M24 34V24M24 24c-4 0-7-3-7-7 4 0 7 3 7 7zM24 27c0-4 3-7 7-7 0 4-3 7-7 7z" fill="#34D399" stroke="#047857" stroke-width="1.5"/></svg>
+          <p><b>3,300 millones de toneladas de CO₂e</b> al año genera el alimento que nunca llega a una mesa.</p>
+          <cite>FAO, 2013</cite>
+        </div>
+      </div>
+
+      <div class="calc">
+        <div class="card calc-controls">
+          <div class="seg seg--light" role="radiogroup" aria-label="Periodo" id="periodoSeg">
+            <button type="button" role="radio" aria-checked="true" data-periodo="mes">Por mes</button>
+            <button type="button" role="radio" aria-checked="false" data-periodo="anio" tabindex="-1">Por año</button>
+          </div>
+          <div class="control">
+            <label for="cKg">Kilos por rescatar por puesto, a la semana <output id="cKgOut" for="cKg">60 kg</output></label>
+            <input type="range" id="cKg" min="0" max="300" step="5" value="60">
+          </div>
+          <div class="control">
+            <label for="cPct">Porcentaje que se puede rescatar <output id="cPctOut" for="cPct">70 %</output></label>
+            <input type="range" id="cPct" min="0" max="100" step="5" value="70">
+          </div>
+          <div class="control">
+            <label for="cPrecio">Precio promedio por kilo <output id="cPrecioOut" for="cPrecio">$18</output></label>
+            <input type="range" id="cPrecio" min="5" max="80" step="1" value="18">
+          </div>
+          <div class="control">
+            <label for="cPuestos">Puestos participantes <output id="cPuestosOut" for="cPuestos">10</output></label>
+            <input type="range" id="cPuestos" min="1" max="100" step="1" value="10">
+          </div>
+          <p class="calc-formula" id="calcFormula"></p>
+          <p class="hope">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V12" stroke="#047857" stroke-width="2" stroke-linecap="round"/><path d="M12 13C12 7 7 4 2 5c0 6 5 9 10 8z" fill="#34D399"/><path d="M12 11c0-5 4-8 10-7 0 5-4 8-10 7z" fill="#A3E635"/></svg>
+            Ningún puesto puede solo con toda la ciudad. Pero diez puestos juntos ya cambian la historia de una colonia.
+          </p>
+        </div>
+
+        <div class="card calc-results">
+          <div class="panel-head">
+            <h3 class="side-title" id="calcTitle">Impacto estimado al mes</h3>
+          </div>
+          <div class="metrics" id="metrics"></div>
+          <p class="disclaimer">
+            Supuestos: 4.33 semanas por mes; 1 kg ≈ 2.5 comidas (supuesto del equipo). CO₂e y agua usan el promedio global de la FAO para alimento que no llega a consumirse: ≈ 2.5 kg CO₂e y ≈ 190 L por kg. Analogías: una familia de 4 bebe ≈ 8 L de agua al día (2 L por persona, ≈ 2,920 L al año); Morelia–CDMX ≈ 300 km en auto; auto compacto ≈ 0.2 kg CO₂e por km. Las barras avanzan hacia el siguiente hito (1 · 2.5 · 5 × 10ⁿ). Ver <a href="#fuentes">fuentes de datos</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ETAPAS ============ -->
+  <section class="section" id="etapas">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow">Ruta</p>
+        <h2>De la idea a la prueba piloto.</h2>
+      </header>
+      <ol class="timeline">
+        <li>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="badge badge--disponible">En curso</span>
+          <h3>Base de datos e interfaz</h3>
+          <p>Registro de comerciantes, lotes y entregas, pensado para usarse desde el celular.</p>
+        </li>
+        <li>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="badge badge--urgente">Siguiente</span>
+          <h3>Vinculación</h3>
+          <p>Primeros comerciantes locales y el Banco de Alimentos, con reglas de entrega claras.</p>
+        </li>
+        <li>
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="badge badge--motivo">Por iniciar</span>
+          <h3>Prueba piloto</h3>
+          <p>Medir cada mes los kilos rescatados y el porcentaje de ingresos que recupera cada vendedor.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ MORELIA ============ -->
+  <section class="section section--mint" id="morelia">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Dónde empezamos</p>
+        <h2>Empieza en Morelia.</h2>
+        <p class="prose-p">Antes de cerrar cada pantalla, el equipo quiere conocer a los comerciantes, sus horarios de cierre y las rutas que ya usan para llevar la fruta a sus puestos. Si funciona en nuestros mercados, puede funcionar en cualquier ciudad de Michoacán.</p>
+        <h3 class="side-title mt">Mercados en la demostración</h3>
+        <ul class="market-list" id="marketList"></ul>
+      </div>
+      <div>
+        <h3 class="side-title">Objetivos de Desarrollo Sostenible</h3>
+        <ul class="ods">
+          <li class="card"><b class="ods-2">2</b><span>Hambre cero</span></li>
+          <li class="card"><b class="ods-12">12</b><span>Producción y consumo responsables</span></li>
+          <li class="card"><b class="ods-13">13</b><span>Acción por el clima</span></li>
+          <li class="card"><b class="ods-17">17</b><span>Alianzas para lograr los objetivos</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO 4 · ALIADOS SOLIDARIOS ============ -->
+  <section class="section" id="aliados">
+    <div class="wrap">
+      <header class="sec-head">
+        <p class="eyebrow"><span class="eyebrow-num">04</span> Aliados solidarios</p>
+        <h2>Gratis para quien vende y para quien come.</h2>
+        <p class="lede">Comerciantes, familias y bancos de alimentos nunca pagan por usar Food Place. Mantener la plataforma en línea sí cuesta, y eso lo cubren personas y negocios de Morelia que se suman como <strong>Aliados solidarios</strong>. Cada $50 mantienen Food Place funcionando un día completo.</p>
+      </header>
+
+      <div class="tiers">
+        <article class="card tier tier--semilla">
+          <svg class="tier-art" viewBox="0 0 48 48" aria-hidden="true">
+            <ellipse cx="24" cy="40" rx="16" ry="4" fill="#D9F99D"/>
+            <path d="M24 39V26" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M24 29c0-6-5-9-10-8 0 6 5 9 10 8z" fill="#34D399"/>
+            <path d="M24 27c0-5 4-8 9-7 0 5-4 8-9 7z" fill="#A3E635"/>
+          </svg>
+          <p class="aud-tag">Para personas</p>
+          <h3>Aliado Semilla</h3>
+          <p class="tier-price"><b>$50</b><span>al mes</span></p>
+          <p class="tier-days">= 1 día de Food Place en línea</p>
+          <ul class="checks">
+            <li>Tu nombre en el muro de aliados</li>
+            <li>Reporte mensual: kilos rescatados y en qué se usó tu aporte</li>
+          </ul>
+          <button class="btn btn-ghost btn-block" type="button" data-ally="semilla">Ser Aliado Semilla</button>
+        </article>
+
+        <article class="card tier tier--raiz">
+          <span class="badge badge--nuevo tier-flag">Ideal para negocios</span>
+          <svg class="tier-art" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M6 29h36" stroke="#065F46" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 29v11M24 34l-6 6M24 33l6 5M24 38l-3 5" stroke="#92400E" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M24 29V16" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M24 21c0-7-6-11-12-10 0 7 6 11 12 10z" fill="#10B981"/>
+            <path d="M24 18c0-6 5-10 11-9 0 6-5 10-11 9z" fill="#A3E635"/>
+          </svg>
+          <p class="aud-tag">Para puestos y negocios</p>
+          <h3>Aliado Raíz</h3>
+          <p class="tier-price"><b>$250</b><span>al mes</span></p>
+          <p class="tier-days">= 5 días de Food Place en línea</p>
+          <ul class="checks">
+            <li>El nombre de tu negocio en el muro de aliados</li>
+            <li>Distintivo «Aliado solidario» para tu local</li>
+            <li>Todo lo del nivel Semilla</li>
+          </ul>
+          <button class="btn btn-primary btn-block" type="button" data-ally="raiz">Ser Aliado Raíz</button>
+        </article>
+
+        <article class="card tier tier--arbol">
+          <svg class="tier-art" viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="22" y="28" width="4" height="13" rx="2" fill="#92400E"/>
+            <circle cx="24" cy="20" r="13" fill="#10B981"/>
+            <circle cx="18" cy="16" r="6" fill="#34D399"/>
+            <circle cx="20" cy="24" r="2.4" fill="#E2483D"/>
+            <circle cx="30" cy="15" r="2.4" fill="#F59E0B"/>
+            <circle cx="29" cy="25" r="2.2" fill="#A3E635"/>
+            <path d="M12 42h24" stroke="#065F46" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p class="aud-tag">Para empresas</p>
+          <h3>Aliado Árbol</h3>
+          <p class="tier-price"><b>$750</b><span>al mes</span></p>
+          <p class="tier-days">= 15 días de Food Place en línea</p>
+          <ul class="checks">
+            <li>Lugar destacado en el muro de aliados</li>
+            <li>Mención en el reporte de impacto y en redes</li>
+            <li>Todo lo del nivel Raíz</li>
+          </ul>
+          <button class="btn btn-ghost btn-block" type="button" data-ally="arbol">Ser Aliado Árbol</button>
+        </article>
+      </div>
+      <p class="tiers-note">¿Prefieres un aporte único? También cuenta: elige cualquier nivel y marca «Solo una vez».</p>
+
+      <div class="ally-grid">
+        <div class="card ally-goal">
+          <div class="panel-head">
+            <h3 class="side-title">Meta del mes</h3>
+            <span class="badge badge--live"><span class="pulse" aria-hidden="true"></span>Demostración</span>
+          </div>
+          <p class="ally-amount"><span id="allyMonto">$0</span> <small>de <span id="allyMeta">$1,500</span></small></p>
+          <div class="ally-bar" aria-hidden="true"><span id="allyBar"></span></div>
+          <p class="ally-days" id="allyDias">Sé el primer aliado: cada $50 mantienen Food Place en línea un día completo.</p>
+
+          <h4 class="mini-title ally-uses-title">¿En qué se usa cada peso?</h4>
+          <div class="uses-bar" aria-hidden="true">
+            <span class="u-servidor" style="width:35%"></span>
+            <span class="u-mejoras" style="width:30%"></span>
+            <span class="u-avisos" style="width:25%"></span>
+            <span class="u-dominio" style="width:10%"></span>
+          </div>
+          <ul class="uses">
+            <li><span class="dot u-servidor"></span><span><b>Servidor y base de datos</b><small>Que la app y el tablero funcionen las 24 horas.</small></span><span class="pct">35 %</span></li>
+            <li><span class="dot u-mejoras"></span><span><b>Mantenimiento y mejoras</b><small>Corregir fallas y sumar lo que pidan los mercados.</small></span><span class="pct">30 %</span></li>
+            <li><span class="dot u-avisos"></span><span><b>Avisos al celular</b><small>Mensajes cuando hay un lote cerca de tu colonia.</small></span><span class="pct">25 %</span></li>
+            <li><span class="dot u-dominio"></span><span><b>Dominio y seguridad</b><small>La dirección web y la conexión segura.</small></span><span class="pct">10 %</span></li>
+          </ul>
+          <p class="panel-note">Meta y distribución estimadas por el equipo para la prueba piloto.</p>
+        </div>
+
+        <div class="card ally-wall-card">
+          <div class="panel-head">
+            <h3 class="side-title">Muro de aliados</h3>
+            <span class="count" id="allyCount">0</span>
+          </div>
+          <ul class="ally-wall" id="allyWall"></ul>
+          <p class="ally-promise">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6z" fill="#D1FAE5" stroke="#047857" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#047857" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Nuestro compromiso: Food Place es y será gratuito para comerciantes y familias. Cada mes publicaremos cuánto se recibió y en qué se usó.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="fuentes">
+  <div class="wrap">
+    <div class="footer-grid">
+      <section class="footer-col" aria-labelledby="fuentes-title">
+        <h2 class="footer-title" id="fuentes-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 11h8M8 15h8M8 7h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Fuentes de datos
+        </h2>
+        <ol class="refs">
+          <li>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO). (2013). <cite>Food Wastage Footprint: Impacts on Natural Resources. Summary Report.</cite> Roma: FAO. Base de los factores de CO₂e (≈ 2.5 kg por kg) y agua (≈ 190 L por kg) de la calculadora.</li>
+          <li>Programa de las Naciones Unidas para el Medio Ambiente (PNUMA / UNEP). (2024). <cite>Food Waste Index Report 2024.</cite> Nairobi: PNUMA. Contexto sobre los alimentos que no llegan a consumirse en hogares, comercios y servicios de comida.</li>
+          <li>Naciones Unidas. <cite>Agenda 2030 para el Desarrollo Sostenible</cite>, ODS 2, 12, 13 y 17.</li>
+          <li>Supuestos del equipo: 1 kg ≈ 2.5 comidas; 2 L de agua potable por persona al día; Morelia–CDMX ≈ 300 km; auto ≈ 0.2 kg CO₂e por km. Los lotes, puestos y precios mostrados son ficticios, con fines de demostración.</li>
+        </ol>
+      </section>
+      <section class="footer-col" aria-labelledby="transp-title">
+        <h2 class="footer-title" id="transp-title">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Declaración de transparencia
+        </h2>
+        <p class="transp">El desarrollo, ideación y maquetación de este prototipo web fue asistido por Inteligencia Artificial bajo lineamientos éticos.</p>
+        <p class="transp-note">Las cifras de impacto son estimaciones con fines demostrativos y deberán verificarse con mediciones reales durante la prueba piloto.</p>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <span class="brand brand--light">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="23" r="13" fill="#10B981"/><path d="M20 10c2-6 7-8 13-8-1 6-6 9-13 8z" fill="#A3E635"/></svg>
+        Food Place
+      </span>
+      <span>Equipo 2 · Oxigena tus Ideas, 19.ª Semana · Desarrollo Sustentable, Tecnológico de Morelia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ RECOMPENSA AL RESERVAR ============ -->
+<div class="reward" id="reward" hidden>
+  <div class="reward-backdrop" data-close-reward></div>
+  <div class="reward-card" role="dialog" aria-modal="true" aria-labelledby="rewardTitle" aria-describedby="rewardMsg">
+    <div class="reward-confetti" id="rewardConfetti" aria-hidden="true"></div>
+    <button class="reward-x" type="button" data-close-reward aria-label="Cerrar">
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="reward-body">
+    <svg class="reward-art" viewBox="0 0 120 120" width="112" height="112" aria-hidden="true">
+      <defs>
+        <linearGradient id="rwGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#047857"/></linearGradient>
+      </defs>
+      <circle cx="60" cy="60" r="56" fill="#D1FAE5"/>
+      <g fill="#34D399">
+        <ellipse cx="20" cy="72" rx="5" ry="10" transform="rotate(-35 20 72)"/>
+        <ellipse cx="16" cy="54" rx="5" ry="10" transform="rotate(-10 16 54)"/>
+        <ellipse cx="22" cy="36" rx="5" ry="10" transform="rotate(20 22 36)"/>
+        <ellipse cx="100" cy="72" rx="5" ry="10" transform="rotate(35 100 72)"/>
+        <ellipse cx="104" cy="54" rx="5" ry="10" transform="rotate(10 104 54)"/>
+        <ellipse cx="98" cy="36" rx="5" ry="10" transform="rotate(-20 98 36)"/>
+      </g>
+      <circle cx="60" cy="60" r="36" fill="url(#rwGrad)"/>
+      <circle cx="60" cy="60" r="36" fill="none" stroke="#A7F3D0" stroke-width="3" stroke-dasharray="4 5"/>
+      <path d="M60 82V60" stroke="#ECFDF5" stroke-width="5" stroke-linecap="round"/>
+      <path d="M60 64c0-12-10-20-22-18 0 12 10 20 22 18z" fill="#A3E635"/>
+      <path d="M60 58c0-12 9-19 21-17 0 11-9 19-21 17z" fill="#D9F99D"/>
+      <g fill="#FBBF24">
+        <path d="M96 14l2.2 5.8 5.8 2.2-5.8 2.2L96 30l-2.2-5.8L88 22l5.8-2.2z"/>
+        <path d="M18 88l1.6 4.2 4.2 1.6-4.2 1.6L18 99.6l-1.6-4.2-4.2-1.6 4.2-1.6z"/>
+      </g>
+    </svg>
+
+    <p class="reward-kicker">Rescate confirmado · <span id="rewardFolio">FP-0000</span></p>
+    <h2 class="reward-title" id="rewardTitle">¡Héroe del barrio!</h2>
+    <p class="reward-msg" id="rewardMsg">Gracias a ti, esta comida en corto llega a una mesa y no a la basura. Sigue así.</p>
+    <p class="reward-lote" id="rewardLote"></p>
+
+    <div class="reward-points">
+      <div class="rp-badge"><span class="rp-plus">+50</span><span class="rp-name">Puntos Semilla 🌱</span></div>
+      <p class="rp-text">Acabas de ganar <b>+50 Puntos Semilla 🌱</b>. Acumula 200 puntos para canjearlos por un <b>envío gratis</b> o <b>acceso prioritario</b> en tu próxima reserva.</p>
+      <div class="rp-bar" aria-hidden="true"><span id="rewardBar"></span></div>
+      <div class="rp-meta"><span><b id="rewardPts">50</b> / 200 puntos</span><span id="rewardFalta">Te faltan 150</span></div>
+      <ul class="rp-perks" id="rewardPerks">
+        <li>
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M2 7h11v9H2zM13 10h4l3 3v3h-7z" fill="#10B981"/><circle cx="6" cy="17.5" r="2" fill="#065F46"/><circle cx="17" cy="17.5" r="2" fill="#065F46"/></svg>
+          Envío gratis
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M13 2L5 13h6l-1 9 8-11h-6z" fill="#F59E0B"/></svg>
+          Acceso prioritario
+        </li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="reward-foot">
+      <button class="btn btn-primary btn-block reward-btn" id="rewardClose" type="button">Seguir navegando</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SUMARSE COMO ALIADO ============ -->
+<div class="reward ally-modal" id="allyModal" hidden>
+  <div class="reward-backdrop" data-close-ally></div>
+  <div class="reward-card ally-card" role="dialog" aria-modal="true" aria-labelledby="allyTitle">
+    <div class="reward-confetti" id="allyConfetti" aria-hidden="true"></div>
+    <button class="reward-x" type="button" data-close-ally aria-label="Cerrar">
+      <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+
+    <form class="ally-form" id="allyForm" novalidate>
+      <div class="reward-body">
+        <div class="ally-intro">
+          <p class="reward-kicker">Aliados solidarios</p>
+          <h2 class="reward-title" id="allyTitle">Súmate como aliado</h2>
+          <p class="reward-msg">Tu aporte mantiene Food Place en línea, gratis para comerciantes y familias.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend class="field-label">Nivel</legend>
+          <div class="chips chips--wrap" id="allyNivel"></div>
+        </fieldset>
+
+        <label class="field">
+          <span class="field-label">Tu nombre o el de tu negocio</span>
+          <input id="allyNombre" type="text" maxlength="40" autocomplete="organization" placeholder="Ej. Frutería La Esperanza">
+        </label>
+
+        <fieldset class="field">
+          <legend class="field-label">Frecuencia</legend>
+          <div class="chips chips--wrap">
+            <label class="chip"><input type="radio" name="allyFreq" value="mes" checked><span>Cada mes</span></label>
+            <label class="chip"><input type="radio" name="allyFreq" value="unica"><span>Solo una vez</span></label>
+          </div>
+        </fieldset>
+
+        <p class="ally-summary" id="allyResumen"></p>
+        <p class="form-error" id="allyError" role="alert" hidden></p>
+        <p class="ally-demo">Demostración: no se realiza ningún cobro. En la prueba piloto podrás aportar con tarjeta, OXXO o transferencia.</p>
+      </div>
+      <div class="reward-foot">
+        <button class="btn btn-primary btn-block reward-btn" type="submit">Confirmar aporte</button>
+      </div>
+    </form>
+
+    <div class="ally-done" id="allyDone" hidden>
+      <div class="reward-body">
+        <svg class="reward-art" viewBox="0 0 120 120" width="96" height="96" aria-hidden="true">
+          <circle cx="60" cy="60" r="56" fill="#D1FAE5"/>
+          <circle cx="60" cy="60" r="36" fill="#047857"/>
+          <path d="M60 82s-20-11.6-20-25.4a10.4 10.4 0 0 1 20-4.6 10.4 10.4 0 0 1 20 4.6C80 70.4 60 82 60 82z" fill="#ECFDF5"/>
+          <path d="M60 42c1-8 7-12 15-11-1 8-7 12-15 11z" fill="#A3E635"/>
+          <g fill="#FBBF24"><path d="M96 14l2.2 5.8 5.8 2.2-5.8 2.2L96 30l-2.2-5.8L88 22l5.8-2.2z"/><path d="M18 88l1.6 4.2 4.2 1.6-4.2 1.6L18 99.6l-1.6-4.2-4.2-1.6 4.2-1.6z"/></g>
+        </svg>
+        <p class="reward-kicker" id="allyDoneKicker">Aporte simulado</p>
+        <h2 class="reward-title" id="allyDoneTitle">¡Gracias!</h2>
+        <p class="reward-msg" id="allyDoneMsg"></p>
+        <p class="ally-demo">Demostración: no se realizó ningún cobro.</p>
+      </div>
+      <div class="reward-foot">
+        <button class="btn btn-primary btn-block reward-btn" id="allyDoneBtn" type="button">Ver el muro de aliados</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
